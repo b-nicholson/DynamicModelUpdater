@@ -3,6 +3,7 @@
 from pyrevit import forms
 import Autodesk.Revit.DB as DB
 from System import Guid
+from System.Collections.Generic import List
 
 class FrrUpdater(DB.IUpdater):
 
