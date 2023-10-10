@@ -5,7 +5,7 @@
 			"default_enabled": "True",
             "type": "extension",
             "rocket_mode_compatible": "True",
-            "name": "DMU Test",
+            "name": "DMUTest",
             "description": "Dynamic Model Updater Sample",
             "author": "Blake Nicholson",
             "author_profile": "https://github.com/b-nicholson",
