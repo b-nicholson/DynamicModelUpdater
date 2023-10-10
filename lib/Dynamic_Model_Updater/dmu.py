@@ -83,8 +83,12 @@ def register_frr_updater():
         DB.UpdaterRegistry.UnregisterUpdater(frr_updater.GetUpdaterId())
 
     DB.UpdaterRegistry.RegisterUpdater(frr_updater)
-    filter = DB.ElementMulticategoryFilter([])
-    filter = DB.ElementCategoryFilter(DB.BuiltInCategory.OST_Walls)
+    cats = List[DB.BuiltInCategory]()
+    categories = [DB.BuiltInCategory.OST_Walls, DB.BuiltInCategory.OST_Ceilings,DB.BuiltInCategory.OST_Floors]
+    for c in categories:
+        cats.Add(c)
+    
+    filter = DB.ElementMulticategoryFilter(cats)
 
     DB.UpdaterRegistry.AddTrigger(frr_updater.GetUpdaterId(), filter,
         DB.Element.GetChangeTypeAny())
